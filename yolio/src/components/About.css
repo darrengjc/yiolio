@@ -1,0 +1,44 @@
+/* src/components/About.css */
+
+/* Add the animation for the button */
+.fade-in-from-left {
+    opacity: 0;
+    transform: translateX(-10%);
+    animation: fadeInFromLeft 1s ease forwards;
+  }
+  
+  @keyframes fadeInFromLeft {
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  
+  /* Add grayscale effect to the .svg on hover */
+  .lg\:max-w-lg .lg\:w-full .md\:w-1\/2 .w-5\/6 img {
+    transition: transform 0.3s ease, filter 0.3s ease; /* Add transition for transform and filter properties */
+  }
+  
+  .lg\:max-w-lg .lg\:w-full .md\:w-1\/2 .w-5\/6 img:hover {
+    transform: scale(1.1);
+    filter: grayscale(100%); /* Apply grayscale effect on hover */
+  }
+
+  /* Add the animation for the butterfly */
+@keyframes fly {
+    0% {
+      transform: translateX(-10%) translateY(0) rotateY(0);
+    }
+    50% {
+      transform: translateX(100vw) translateY(-20vh) rotateY(180deg);
+    }
+    100% {
+      transform: translateX(110vw) translateY(0) rotateY(360deg);
+    }
+  }
+  
+  /* Style the butterfly SVG */
+  .butterfly {
+    animation: fly 10s linear infinite;
+    /* Add other styling properties for the butterfly SVG, like width, height, etc. */
+  }
